@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 <?php
 class NumberConverter {
     public function decimalToBinary($decimal) {
@@ -84,3 +92,20 @@ class NumberConverter {
         }
     }
 }
+// Procesar el formulario
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $numero = $_POST['number'] ?? '';
+    $baseOrigen = $_POST['base'] ?? '';
+    $baseDestino = $_POST['baseDestino'] ?? ''; // Nuevo campo para seleccionar la base destino
+
+    $converter = new NumberConverter();
+
+    // Mostrar solo la conversión seleccionada
+    $resultado = $converter->convertir($numero, $baseOrigen, $baseDestino);
+    echo '<div class="result"><h2>Resultado de la conversión</h2>';
+    echo "<p>El número <strong>$numero</strong> en base <strong>$baseOrigen</strong> convertido a <strong>$baseDestino</strong> es: <strong>" . strtoupper($resultado) . "</strong></p></div>";
+    echo '<a href="index.php">Volver</a>';
+}
+?>
+</body>
+</html>

@@ -14,13 +14,13 @@
         <label for="number">Ingrese un número:</label>
         <input type="text" id="number" name="number" required>
         
-        <label for="base">Seleccione la base:</label>
-        <select id="base" name="base">
-            <option value="decimal">Decimal (10)</option>
-            <option value="binary">Binario (2)</option>
-            <option value="octal">Octal (8)</option>
-            <option value="hexadecimal">Hexadecimal (16)</option>
-        </select>
+    <label for="baseDestino">Convertir a:</label>
+    <select id="baseDestino" name="baseDestino">
+    <option value="decimal">Decimal (10)</option>
+    <option value="binary">Binario (2)</option>
+    <option value="octal">Octal (8)</option>
+    <option value="hexadecimal">Hexadecimal (16)</option>
+    </select>
         
         <button type="submit">Convertir</button>
     </form>

@@ -1,6 +1,4 @@
 <?php
-// This file defines types and interfaces used in the application for number conversion and calculations.
-
 interface NumberBase {
     public function toDecimal($value);
     public function fromDecimal($value);
